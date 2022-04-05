@@ -1,9 +1,11 @@
 <script>
-  import Chat from './Chat.svelte';
-  import Header from './Header.svelte';
+    import {gun} from './initGun.js'
+    let myVal = gun.get('message');
+
+    let input = "null";
+    myVal.on((data => input=data['message']))
 </script>
 
 <div class="app">
-    <Header />
-    <Chat />
+    <textarea bind:value={input} on:input={myVal.put({message: input})}></textarea>
 </div>
