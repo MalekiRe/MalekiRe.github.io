@@ -7,54 +7,10 @@
     
     
     <link rel="icon" href="icon.ico">
-    <style nonce="Xow7aLLKHhpLmsU+gH9exA==">body, html {
-    height: 100%;
-}
-
-body {
-    background-color: lightgray;
-    margin: 0;
+    <style nonce="LC6A9HzrSkMP0vYiTddjEw==">.game-container {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.game-container {
-    width: 800px;
-    height: 600px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.lds-dual-ring {
-    display: inline-block;
-    position: absolute;
-    left: 0;
-    right: 0;
-    margin: auto;
-    width: 10px;
-    height: 10px;
-}
-
-.lds-dual-ring:after {
-    content: " ";
-    display: block;
-    width: 64px;
-    height: 64px;
-    border-radius: 50%;
-    border: 6px solid #fff;
-    border-color: #fff transparent #fff transparent;
-    animation: lds-dual-ring 1.2s linear infinite;
-}
-
-@keyframes lds-dual-ring {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
 }
 
 #bevy {
@@ -62,10 +18,13 @@ body {
 }
 </style>
 
-<link rel="modulepreload" href="./p2pvr-6cbe5078b021d756.js" crossorigin=anonymous integrity="sha384-jZ8soG7Fn2a+KKL8DW+afIDkBY1DAxi0x6Lvb+V+MkHjxdHeIcXfX9YdFU/NdLPT">
-<link rel="preload" href="./p2pvr-6cbe5078b021d756_bg.wasm" crossorigin=anonymous integrity="sha384-c+G8/7rti1WrHXdfzxYfwoARXNnB4XbzN4IylgVTexsl6npUMqVXlPnzfzAtCwig" as="fetch" type="application/wasm"></head>
+<link rel="modulepreload" href="./p2pvr-d2a584cb32f42d27.js" crossorigin=anonymous integrity="sha384-arHoVGAtWOrirI3GzDaI4PZU4PKHOsf642OijV+aNxVj5ChgGJfK74p+4bCrYejU">
+<link rel="preload" href="./p2pvr-d2a584cb32f42d27_bg.wasm" crossorigin=anonymous integrity="sha384-BP9845RgscqZk7DGhbO/MxP2B69T3LsWypntRaTYs3zj4+5zFnxJay+o+3RIGiYf" as="fetch" type="application/wasm"></head>
 <body>
-<script nonce="+TZjggFEfPob/u8EvL/2pQ==">// Insert hack to make sound autoplay on Chrome as soon as the user interacts with the tab:
+    <canvas id="bevy">
+        Javascript and support for canvas is required
+    </canvas>
+<script nonce="CMxqxY77/t2pjhc2eQ0Njw==">// Insert hack to make sound autoplay on Chrome as soon as the user interacts with the tab:
 // https://developers.google.com/web/updates/2018/11/web-audio-autoplay#moving-forward
 
 // the following function keeps track of all AudioContexts and resumes them on the first user
@@ -128,16 +87,10 @@ body {
     });
 })();
 </script>
-<div class="game-container">
-    <div class="lds-dual-ring"></div>
-    <canvas id="bevy">
-        Javascript and support for canvas is required
-    </canvas>
-</div>
 
-<script type="module" nonce="019zMfNKflcdC5zVCxq14g==">
-import init, * as bindings from './p2pvr-6cbe5078b021d756.js';
-const wasm = await init('./p2pvr-6cbe5078b021d756_bg.wasm');
+<script type="module" nonce="HxrlSLJM2vQ/XjJDSHAfNw==">
+import init, * as bindings from './p2pvr-d2a584cb32f42d27.js';
+const wasm = await init('./p2pvr-d2a584cb32f42d27_bg.wasm');
 
 
 window.wasmBindings = bindings;
