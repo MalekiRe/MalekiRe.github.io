@@ -7,7 +7,7 @@
     
     
     <link rel="icon" href="icon.ico">
-    <style nonce="8HaDGeAaGApOC5pAFBgYRw==">.game-container {
+    <style nonce="SgnpP2mi35mPA5kBG0pc6A==">.game-container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -18,13 +18,14 @@
 }
 </style>
 
-<link rel="modulepreload" href="./p2pvr-993fb9152c0f365f.js" crossorigin=anonymous integrity="sha384-tag/ANACyTVIq/tVBusDg3nGL/FAUX4ARiKNkl463X4u/bAS99G2hTdTQVqEYR5C">
-<link rel="preload" href="./p2pvr-993fb9152c0f365f_bg.wasm" crossorigin=anonymous integrity="sha384-EhKYBM1/mFXm/TP2b3Hasozw+633ub7SsixJ4e/uomHaD1OzEOhdH4pAps9KsPxs" as="fetch" type="application/wasm"></head>
+<link rel="modulepreload" href="./p2pvr-20ae820eba637c5e.js" crossorigin=anonymous integrity="sha384-TTqBu7Jj7glF2EC83xqvoYe9yDRpnwV3M3C2y7zBam205TZ/3zXRFBHN1IfDcGHe">
+<link rel="preload" href="./p2pvr-20ae820eba637c5e_bg.wasm" crossorigin=anonymous integrity="sha384-L8mzxGhjgTLo3jLZDnLdp78KFNCM34CJ+r+5utwvJJRQ+Zhlg9OKviffgiPo25ev" as="fetch" type="application/wasm"></head>
 <body>
+<audio id="audio" controls></audio>
     <canvas id="bevy">
         Javascript and support for canvas is required
     </canvas>
-<script nonce="WtmyhCBuvYtyCo2rGfyDpw==">// Insert hack to make sound autoplay on Chrome as soon as the user interacts with the tab:
+<script nonce="Xe7jgRnWe1R/Sgv4PcfmDQ==">// Insert hack to make sound autoplay on Chrome as soon as the user interacts with the tab:
 // https://developers.google.com/web/updates/2018/11/web-audio-autoplay#moving-forward
 
 // the following function keeps track of all AudioContexts and resumes them on the first user
@@ -88,9 +89,9 @@
 })();
 </script>
 
-<script type="module" nonce="I+s1TTilcjUxxzRqHKIgrQ==">
-import init, * as bindings from './p2pvr-993fb9152c0f365f.js';
-const wasm = await init('./p2pvr-993fb9152c0f365f_bg.wasm');
+<script type="module" nonce="X+x3dYYgKGutZ8wCHnvroQ==">
+import init, * as bindings from './p2pvr-20ae820eba637c5e.js';
+const wasm = await init('./p2pvr-20ae820eba637c5e_bg.wasm');
 
 
 window.wasmBindings = bindings;
