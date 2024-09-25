@@ -3,29 +3,40 @@
 <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <title>Bevy game</title> <!-- ToDo -->
+    <title>Nexus</title> <!-- ToDo -->
     
     
-    <link rel="icon" href="icon.ico">
-    <style nonce="SgnpP2mi35mPA5kBG0pc6A==">.game-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    <link rel="icon" href="./icon-2c7b45e122a9d340.ico" integrity="sha384&#x2D;UKQuv6Q1dj&#x2B;0vZ0&#x2B;BHk3ixAZ9cNiplC5i9TZXUdAroQNZ39TBFAPoo87Ex4W1bfX"/>
+    <style nonce="F29DdJ9QnmrerIL8uerPwg==">#bevy {
+    z-index: 2;
+}
+audio{
+    display:none;
+}
+canvas {
+    width: 100% !important;
+    height: 100% !important;
+}
+html {
+    height: 100%;
+    background-color: black;
+    margin: 0;
+    overflow: hidden;
 }
 
-#bevy {
-    z-index: 2;
+body {
+    height: 100%;
+    background-color: black;
+    margin: 0;
 }
 </style>
 
-<link rel="modulepreload" href="./p2pvr-20ae820eba637c5e.js" crossorigin=anonymous integrity="sha384-TTqBu7Jj7glF2EC83xqvoYe9yDRpnwV3M3C2y7zBam205TZ/3zXRFBHN1IfDcGHe">
-<link rel="preload" href="./p2pvr-20ae820eba637c5e_bg.wasm" crossorigin=anonymous integrity="sha384-L8mzxGhjgTLo3jLZDnLdp78KFNCM34CJ+r+5utwvJJRQ+Zhlg9OKviffgiPo25ev" as="fetch" type="application/wasm"></head>
+<link rel="modulepreload" href="./p2pvr-73e2acb3e50cedd.js" crossorigin=anonymous integrity="sha384-lGeDt6zCR6lrFKFQ3hW0WykfcheK6CD/Axq7K8rUvImJL5jS/Je3z7FbmTCuGUep">
+<link rel="modulepreload" href="./snippets/bevy_web_file_drop-2545a5bbf02336a3/src/drop.js" crossorigin=anonymous integrity="sha384-KP3Nm2taSNdepcrVsEEzp30jWVBASZSmBj7+8mOz/J0AkkL4RyYek9oJpdhBtr2a">
+<link rel="preload" href="./p2pvr-73e2acb3e50cedd_bg.wasm" crossorigin=anonymous integrity="sha384-D16bTJpcuubIFj2sJZlqAreTqvwx1s4rEaZkaazB+q6by2xg7wHF4YWAEat7ZwJf" as="fetch" type="application/wasm"></head>
 <body>
-<audio id="audio" controls></audio>
-    <canvas id="bevy">
-        Javascript and support for canvas is required
-    </canvas>
-<script nonce="Xe7jgRnWe1R/Sgv4PcfmDQ==">// Insert hack to make sound autoplay on Chrome as soon as the user interacts with the tab:
+<div id="audio" controls></div>
+<script nonce="uDppDODobN0JayM7NH7rAw==">// Insert hack to make sound autoplay on Chrome as soon as the user interacts with the tab:
 // https://developers.google.com/web/updates/2018/11/web-audio-autoplay#moving-forward
 
 // the following function keeps track of all AudioContexts and resumes them on the first user
@@ -89,9 +100,9 @@
 })();
 </script>
 
-<script type="module" nonce="X+x3dYYgKGutZ8wCHnvroQ==">
-import init, * as bindings from './p2pvr-20ae820eba637c5e.js';
-const wasm = await init('./p2pvr-20ae820eba637c5e_bg.wasm');
+<script type="module" nonce="m63yK7I0McslHHHoKZ4QRA==">
+import init, * as bindings from './p2pvr-73e2acb3e50cedd.js';
+const wasm = await init('./p2pvr-73e2acb3e50cedd_bg.wasm');
 
 
 window.wasmBindings = bindings;
